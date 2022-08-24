@@ -25,8 +25,8 @@ class Pile:
             return False
     
     def insert_data(self, new_data):
-        new_node.last = self.top
         new_node = Node(new_data)
+        new_node.last = self.top
         self.top = new_node
        
     def remove_data(self):
