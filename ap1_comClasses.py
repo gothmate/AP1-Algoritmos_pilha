@@ -2,6 +2,8 @@
 #
 # -*- coding: utf-8 -*-
 
+from time import sleep
+
 class Node:
     def __init__(self, data=0, last_node=0):
         self.data = data
@@ -35,6 +37,9 @@ class Pile:
         else:
             self.top = self.top.last
 
+def line(tipo):
+    print(tipo * 30 )
+
 
 ########## Main ############
 
@@ -43,11 +48,14 @@ uneven = Pile()
 
 for i in range(30):
     try:
+        line('~=')
         num = int(input(f'Digite o {i + 1}º número: '))
         where_to_upload = even.is_even(num)
         if num == 0:
             even.remove_data()
             uneven.remove_data()
+            print(even)
+            print(uneven)
         else:
             if even.is_even(num) and num != 0:
                 even.insert_data(num)
@@ -58,11 +66,27 @@ for i in range(30):
     except ValueError as error:
         print(f"Somente números são permitidos. {error}")
 
+
+#### CONCLUSÃO ####
+
+line("==")
 print("Visualizando a Pilha PARES completa: ", even)
+line("~=")
+
 while even.top != None:
     even.remove_data()
     print("Removendo elemento que está no topo da pilha PARES: ", even)
+    sleep(0.5)
+
+line("==")
 print("Visualizando a Pilha ÍMPARES completa: ", uneven)
+line("~=")
+
 while uneven.top != None:
     uneven.remove_data()
     print("Removendo elemento que está no topo da pilha ÍMPARES: ", uneven)
+    sleep(0.5)
+
+line('~~')
+print("Fim das FILAS!")
+line('~~')
