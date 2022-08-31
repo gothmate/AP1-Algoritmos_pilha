@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 notaA = []
 notaB = []
@@ -29,11 +29,11 @@ print(f'Quantidade de Respostas: {len(dados)}')
 
 separaNotas(dados)
 
-# print(f"Nota A: {len(notaA)} de 69")
-# print(f"Nota B: {len(notaB)} de 69")
-# print(f"Nota C: {len(notaC)} de 69")
-# print(f"Nota D: {len(notaD)} de 69")
-# print(f"Nota E: {len(notaE)} de 69")
+print(f"Nota A: {len(notaA)} de 69")
+print(f"Nota B: {len(notaB)} de 69")
+print(f"Nota C: {len(notaC)} de 69")
+print(f"Nota D: {len(notaD)} de 69")
+print(f"Nota E: {len(notaE)} de 69")
 
 qualidadeAbsoluta = (len(notaA) + len(notaB) +
                      len(notaC) + len(notaD) + len(notaE)) / 5
@@ -61,17 +61,17 @@ print(f'Percentagem Relativa D: {porcentagemQualitativaD:.0f}%')
 print(f'Percentagem Relativa E: {porcentagemQualitativaE:.0f}%')
 
 
-data = {
-    'A': porcentagemQualitativaA,
-    'B': porcentagemQualitativaB,
-    'C': porcentagemQualitativaC,
-    'D': porcentagemQualitativaD,
-    'E': porcentagemQualitativaE
-}
-names = list(data.keys())
-values = list(data.values())
-fig, axs = plt.subplots(1, 2, figsize=(7, 3), sharey=True)
-axs[0].bar(names, values)
-axs[1].scatter(names, values)
-fig.suptitle('Avaliação Restaurante')
-plt.show()
+# data = {
+#     'A': porcentagemQualitativaA,
+#     'B': porcentagemQualitativaB,
+#     'C': porcentagemQualitativaC,
+#     'D': porcentagemQualitativaD,
+#     'E': porcentagemQualitativaE
+# }
+# names = list(data.keys())
+# values = list(data.values())
+# fig, axs = plt.subplots(1, 2, figsize=(7, 3), sharey=True)
+# axs[0].bar(names, values)
+# axs[1].scatter(names, values)
+# fig.suptitle('Avaliação Restaurante')
+# plt.show()
