@@ -2,7 +2,6 @@
 #
 # -*- coding: utf-8 -*-
 
-from time import sleep
 
 class Node:
     def __init__(self, data=0, last_node=0):
@@ -76,7 +75,6 @@ line("~=")
 while even.top != None:
     even.remove_data()
     print("Removendo elemento que está no topo da pilha PARES: ", even)
-    sleep(0.5)
 
 line("==")
 print("Visualizando a Pilha ÍMPARES completa: ", uneven)
@@ -85,7 +83,6 @@ line("~=")
 while uneven.top != None:
     uneven.remove_data()
     print("Removendo elemento que está no topo da pilha ÍMPARES: ", uneven)
-    sleep(0.5)
 
 line('~~')
 print("Fim das FILAS!")
